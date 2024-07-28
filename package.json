@@ -9,6 +9,7 @@
     "preview": "astro preview",
     "astro": "astro",
     "lint:js": "eslint --fix '**/*.@(js|ts|jsx|tsx|astro)'",
+    "lint:css": "stylelint --fix '**/*.@(css)'",
     "format": "prettier --ignore-path .prettierignore --write ."
   },
   "dependencies": {
@@ -30,6 +31,11 @@
     "eslint-plugin-jsx-a11y": "^6.9.0",
     "eslint-plugin-unused-imports": "^4.0.1",
     "prettier": "^3.3.3",
+    "stylelint": "^16.7.0",
+    "stylelint-config-recess-order": "^5.0.1",
+    "stylelint-config-standard": "^36.0.1",
+    "stylelint-declaration-block-no-ignored-properties": "^2.8.0",
+    "stylelint-order": "^6.0.4",
     "typescript": "^5.5.4",
     "typescript-eslint": "^7.17.0"
   },
