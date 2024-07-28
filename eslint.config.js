@@ -118,6 +118,7 @@ export default tseslint.config(
           format: ['PascalCase'],
         },
       ],
+      "@typescript-eslint/consistent-type-definitions": ["error", "type"],
       'no-implicit-coercion': 'error',
       'unused-imports/no-unused-imports': 'error',
       'arrow-body-style': 'off',
