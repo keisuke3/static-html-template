@@ -3,6 +3,7 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
+    "preinstall": "npx only-allow pnpm",
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro check && astro build",
@@ -12,7 +13,8 @@
     "lint:css": "stylelint --fix '**/*.@(css)'",
     "lint:html": "markuplint \"**/*.{jsx,tsx,astro}\"",
     "lint:secret": "secretlint --maskSecrets --secretlintignore .gitignore '**/*'",
-    "format": "prettier --ignore-path .prettierignore --write ."
+    "format": "prettier --ignore-path .prettierignore --write .",
+    "tsc": "bash -c tsc --noEmit"
   },
   "dependencies": {
     "astro": "^4.12.2",
