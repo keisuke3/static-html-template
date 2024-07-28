@@ -11,6 +11,7 @@
     "lint:js": "eslint --fix '**/*.@(js|ts|jsx|tsx|astro)'",
     "lint:css": "stylelint --fix '**/*.@(css)'",
     "lint:html": "markuplint \"**/*.{jsx,tsx,astro}\"",
+    "lint:secret": "secretlint --maskSecrets --secretlintignore .gitignore '**/*'",
     "format": "prettier --ignore-path .prettierignore --write ."
   },
   "dependencies": {
@@ -26,6 +27,7 @@
     "@markuplint/astro-parser": "^4.6.5",
     "@markuplint/jsx-parser": "^4.7.5",
     "@markuplint/react-spec": "^4.5.5",
+    "@secretlint/secretlint-rule-preset-recommend": "^8.2.4",
     "@types/eslint__js": "^8.42.3",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
@@ -37,6 +39,7 @@
     "eslint-plugin-unused-imports": "^4.0.1",
     "markuplint": "^4.9.2",
     "prettier": "^3.3.3",
+    "secretlint": "^8.2.4",
     "stylelint": "^16.7.0",
     "stylelint-config-recess-order": "^5.0.1",
     "stylelint-config-standard": "^36.0.1",
