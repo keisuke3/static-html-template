@@ -1,0 +1,30 @@
+pre-commit:
+  parallel: true
+  commands:
+    markuplint:
+      glob: '**/*.{jsx,tsx,astro}'
+      run: pnpm markuplint {staged_files}
+    tsc:
+      glob: '**/*.{ts,tsx}'
+      run: pnpm run tsc {staged_files}
+    eslint:
+      glob: '**/*.{js,ts,jsx,tsx,astro}'
+      run: pnpm eslint --fix {staged_files}
+      stage_fixed: true
+    stylelint:
+      glob: '**/*.{css}'
+      run: pnpm stylelint --fix {staged_files}
+      stage_fixed: true
+    prettier:
+      glob: '**/*'
+      exclude: '**/*.{svg}'
+      run: pnpm prettier --ignore-path .prettierignore --write {staged_files}
+      stage_fixed: true
+    secretlint:
+      run: pnpm secretlint --maskSecrets --secretlintignore .gitignore {staged_files}
+
+prepare-commit-msg:
+  scripts:
+    'commitzen.sh':
+      interactive: true
+      runner: sh

@@ -18,7 +18,8 @@
     "gen:component": "plop",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "commit": "cz"
+    "commit": "cz",
+    "lefthook": "lefthook install"
   },
   "dependencies": {
     "astro": "^4.12.2",
@@ -58,9 +59,11 @@
     "eslint-plugin-jsx-a11y": "^6.9.0",
     "eslint-plugin-storybook": "^0.8.0",
     "eslint-plugin-unused-imports": "^4.0.1",
+    "lefthook": "^1.7.9",
     "markuplint": "^4.9.2",
     "plop": "^4.0.1",
     "prettier": "^3.3.3",
+    "prettier-plugin-astro": "^0.14.1",
     "secretlint": "^8.2.4",
     "storybook": "^8.2.6",
     "stylelint": "^16.7.0",
