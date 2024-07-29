@@ -2,4 +2,4 @@
 *.map
 *module.css.d.ts
 *.sh
-
+*.hbs

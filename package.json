@@ -14,10 +14,12 @@
     "lint:html": "markuplint \"**/*.{jsx,tsx,astro}\"",
     "lint:secret": "secretlint --maskSecrets --secretlintignore .gitignore '**/*'",
     "format": "prettier --ignore-path .prettierignore --write .",
-    "tsc": "bash -c tsc --noEmit"
+    "tsc": "bash -c tsc --noEmit",
+    "plop": "plop"
   },
   "dependencies": {
     "astro": "^4.12.2",
+    "clsx": "^2.1.1",
     "destyle.css": "^4.0.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
@@ -40,6 +42,7 @@
     "eslint-plugin-jsx-a11y": "^6.9.0",
     "eslint-plugin-unused-imports": "^4.0.1",
     "markuplint": "^4.9.2",
+    "plop": "^4.0.1",
     "prettier": "^3.3.3",
     "secretlint": "^8.2.4",
     "stylelint": "^16.7.0",
