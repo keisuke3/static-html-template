@@ -23,6 +23,7 @@ export default tseslint.config(
         project: './tsconfig.json',
       },
     },
+    ignores: ['**/.storybook/**'],
     rules: {
       'eslintImport/order': [
         'error',
