@@ -18,16 +18,16 @@ export const CUSTOM_VIEWPORTS = {
   iPad: {
     name: 'iPad（768 x 1024）',
     styles: {
-      height: '1024px',
       width: '768px',
+      height: '1024px',
     },
     type: 'tablet',
   },
   iPadPro: {
     name: 'iPad Pro（1024 x 1366）',
     styles: {
-      height: '1366px',
       width: '1024px',
+      height: '1366px',
     },
     type: 'tablet',
   },
