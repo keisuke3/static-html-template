@@ -1,54 +1,73 @@
-# Astro Starter Kit: Basics
+# Astro Template
+
+![node version](https://img.shields.io/badge/node-20.12.0-48C628.svg?style=flat-square) ![pnpm version](https://img.shields.io/badge/pnpm-9.6.0-2D7DBE.svg?style=flat-square) ![volta version](https://img.shields.io/badge/volta-1.0.8~-EDCF3A.svg?style=flat-square)
+
+## 📝 要件
+
+- [Volta](https://volta.sh/)がインストールされていること
+- makeコマンドがインストールされていること
+  - Mac: 標準でインストール済み
+  - Windows: 標準ではインストールされていないため、適宜インストールしてください
+
+## 🛠️ 環境構築
+
+1. リポジトリをクローン
 
 ```sh
-npm create astro@latest -- --template basics
+git clone -b astro https://github.com/keisuke3/static-html-template.git
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+2. 対象のディレクトリに移動
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+```sh
+cd static-html-template
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+3. 以下のコマンドを実行
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+```sh
+make init
+```
 
-Any static assets, like images, can be placed in the `public/` directory.
+4. [localhost:8000](http://localhost:8000)にアクセスし、ページが表示されることを確認
 
-## 🧞 Commands
+## 🧞 コマンド
 
-All commands are run from the root of the project, from a terminal:
+コマンドはプロジェクトルートで実行してください。
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+| Command                  | Action                                   |
+| :----------------------- | :--------------------------------------- |
+| `pnpm install`           | 依存モジュールをインストール             |
+| `pnpm run dev`           | `localhost:8000`で開発サーバーを立ち上げ |
+| `pnpm run build`         | `./dist/`にビルドファイルを生成          |
+| `pnpm run preview`       | ローカル環境でビルドファイルをプレビュー |
+| `pnpm run lint:*`        | 各種Lint実行                             |
+| `pnpm run format`        | Prettierによるフォーマット               |
+| `pnpm run tsc`           | TypeScriptによる型チェック               |
+| `pnpm run gen:component` | コンポーネントの雛形を作成               |
+| `pnpm run storybook`     | Storybook立ち上げ                        |
 
-## 👀 Want to learn more?
+## 🚀 ディレクトリ構造
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+```
+.
+├── src
+  ├── pages
+  ├── layouts
+  ├── components
+  │ ├── features
+  │ └── ui
+  ├── styles
+  ├── types
+  └── utils
+```
+
+| ディレクトリ名     | 説明                                       |
+| ------------------ | ------------------------------------------ |
+| pages              | ページを管理（ファイルベースルーティング） |
+| layouts            | ページのレイアウトを管理                   |
+| components/feature | ページ固有のコンポーネントを管理           |
+| components/ui      | 汎用的なUIコンポーネントを管理             |
+| styles             | グローバルなCSSを管理                      |
+| types              | 型定義を管理                               |
+| utils              | ユーティリティ関数を管理                   |
