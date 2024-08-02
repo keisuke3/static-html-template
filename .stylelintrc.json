@@ -1,0 +1,64 @@
+{
+  "plugins": [
+    "stylelint-order",
+    "stylelint-declaration-block-no-ignored-properties"
+  ],
+  "extends": ["stylelint-config-standard", "stylelint-config-recess-order"],
+  "rules": {
+    "order/order": ["custom-properties", "declarations"],
+    "plugin/declaration-block-no-ignored-properties": true,
+    "number-max-precision": 2,
+    "selector-class-pattern": [
+      "^([a-z][a-z0-9]*)(-[a-z0-9]+)*(-[a-z0-9]+)?(-[a-z0-9]+)?$",
+      {
+        "message": "Please use '-' as the word delimiter."
+      }
+    ],
+    "declaration-block-no-duplicate-properties": true,
+    "no-duplicate-selectors": true,
+    "declaration-no-important": true,
+    "declaration-property-unit-allowed-list": {
+      "font-size": ["rem", "em", "vw"],
+      "line-height": ["rem"],
+      "padding": ["rem", "lh"],
+      "margin": ["rem"],
+      "gap": ["rem"]
+    },
+    "media-feature-name-value-allowed-list": {
+      "width": ["640px", "768px", "1024px", "1440px"]
+    },
+    "media-feature-name-allowed-list": ["width", "hover", "any-hover"],
+    "media-feature-name-unit-allowed-list": {
+      "width": ["px"]
+    },
+    "selector-max-id": 0,
+    "selector-max-type": 0,
+    "color-no-hex": true
+  },
+  "overrides": [
+    {
+      "files": ["src/**/*.{css}"]
+    },
+    {
+      "files": ["src/styles/global.css"],
+      "rules": {
+        "selector-max-type": null,
+        "declaration-property-unit-allowed-list": {
+          "font-size": ["rem", "em", "vw", "px"]
+        }
+      }
+    },
+    {
+      "files": ["src/styles/variable.css"],
+      "rules": {
+        "color-no-hex": null
+      }
+    },
+    {
+      "files": ["src/styles/a11y.css"],
+      "rules": {
+        "declaration-no-important": null
+      }
+    }
+  ]
+}

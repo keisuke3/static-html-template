@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "author": "",
   "license": "ISC",
-  "type": "module",
   "scripts": {
     "dev": "lite-server",
     "lint:js": "eslint --fix '**/*.@(js)'",
+    "lint:css": "stylelint --fix '**/*.@(css)'",
     "format": "prettier --ignore-path .prettierignore --write ."
   },
   "devDependencies": {
@@ -16,7 +16,12 @@
     "eslint-plugin-unicorn": "^55.0.0",
     "eslint-plugin-unused-imports": "^4.0.1",
     "lite-server": "^2.6.1",
-    "prettier": "^3.3.3"
+    "prettier": "^3.3.3",
+    "stylelint": "^16.8.1",
+    "stylelint-config-recess-order": "^5.0.1",
+    "stylelint-config-standard": "^36.0.1",
+    "stylelint-declaration-block-no-ignored-properties": "^2.8.0",
+    "stylelint-order": "^6.0.4"
   },
   "volta": {
     "node": "20.12.0"
