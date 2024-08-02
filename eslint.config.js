@@ -32,12 +32,12 @@ export default [
           },
           pathGroups: [
             {
-              pattern: '/pages/**',
+              pattern: '/styles/**',
               group: 'internal',
               position: 'before',
             },
             {
-              pattern: '/styles/**',
+              pattern: '/public/**',
               group: 'internal',
               position: 'before',
             },

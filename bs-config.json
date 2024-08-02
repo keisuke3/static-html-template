@@ -1,8 +1,8 @@
 {
-  "files": ["./src/pages/**/*"],
+  "files": ["./src/**/*.{html,css,js}"],
   "port": 8000,
   "open": false,
   "server": {
-    "baseDir": "./src/pages"
+    "baseDir": "src"
   }
 }
