@@ -10,20 +10,20 @@ export default function (plop) {
     ],
     actions: [
       {
-        type: "add",
-        path: "src/{{lowerCase name}}/index.html",
-        templateFile: ".plopfile/index.html.hbs",
+        type: 'add',
+        path: 'src/{{lowerCase name}}/index.html',
+        templateFile: '.plopfile/index.html.hbs',
       },
       {
-        type: "add",
-        path: "src/{{lowerCase name}}/index.css",
-        templateFile: ".plopfile/index.css.hbs",
+        type: 'add',
+        path: 'src/{{lowerCase name}}/index.css',
+        templateFile: '.plopfile/index.css.hbs',
       },
       {
-        type: "add",
-        path: "src/{{lowerCase name}}/index.js",
-        templateFile: ".plopfile/index.js.hbs",
-      }
+        type: 'add',
+        path: 'src/{{lowerCase name}}/index.js',
+        templateFile: '.plopfile/index.js.hbs',
+      },
     ],
   })
 }
