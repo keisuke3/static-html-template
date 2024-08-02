@@ -1,0 +1,80 @@
+{
+  "extends": ["@commitlint/config-conventional"],
+  "rules": {
+    "type-enum": [
+      2,
+      "always",
+      [
+        "feat",
+        "change",
+        "fix",
+        "delete",
+        "style",
+        "refactor",
+        "perf",
+        "docs",
+        "chore"
+      ]
+    ],
+    "scope-empty": [2, "always"],
+    "subject-max-length": [2, "always", 50],
+    "subject-case": [0],
+    "body-max-length": [2, "always", 72]
+  },
+  "prompt": {
+    "messages": {
+      "skip": "'Enterでスキップ'",
+      "max": "最大%d文字",
+      "min": "最小%d文字",
+      "emptyWarning": "必須事項です",
+      "upperLimitWarning": "最大文字数を超えています",
+      "lowerLimitWarning": "最小文字数に達していません"
+    },
+    "questions": {
+      "type": {
+        "description": "コミットの種類を選択してください",
+        "enum": {
+          "feat": {
+            "description": "機能追加"
+          },
+          "change": {
+            "description": "既存機能の変更"
+          },
+          "fix": {
+            "description": "バグ修正"
+          },
+          "delete": {
+            "description": "ファイル削除"
+          },
+          "style": {
+            "description": "空白、セミコロン、行、コーディングフォーマットなどの修正"
+          },
+          "refactor": {
+            "description": "既存の振る舞いを変更しないコード改善"
+          },
+          "perf": {
+            "description": "パフォーマンスを向上させるコード変更"
+          },
+          "docs": {
+            "description": "ドキュメントのみの変更"
+          },
+          "chore": {
+            "description": "ビルド、補助ツール、ライブラリ関連、開発環境変更"
+          }
+        }
+      },
+      "subject": {
+        "description": "変更内容の要約を記入してください"
+      },
+      "body": {
+        "description": "要約にまとめきれない場合、変更内容の詳細を記入してください"
+      },
+      "isBreaking": {
+        "description": "このプロジェクトでは使用しないため、Nを選択してください"
+      },
+      "isIssueAffected": {
+        "description": "このプロジェクトでは使用しないため、Nを選択してください"
+      }
+    }
+  }
+}
