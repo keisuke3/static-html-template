@@ -7,6 +7,7 @@
     "dev": "lite-server",
     "lint:js": "eslint --fix '**/*.@(js)'",
     "lint:css": "stylelint --fix '**/*.@(css)'",
+    "lint:html": "markuplint \"**/*.html\"",
     "format": "prettier --ignore-path .prettierignore --write ."
   },
   "devDependencies": {
@@ -16,6 +17,7 @@
     "eslint-plugin-unicorn": "^55.0.0",
     "eslint-plugin-unused-imports": "^4.0.1",
     "lite-server": "^2.6.1",
+    "markuplint": "^4.9.2",
     "prettier": "^3.3.3",
     "stylelint": "^16.8.1",
     "stylelint-config-recess-order": "^5.0.1",
