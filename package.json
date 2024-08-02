@@ -12,7 +12,8 @@
     "lint:secret": "secretlint --maskSecrets --secretlintignore .gitignore '**/*'",
     "format": "prettier --ignore-path .prettierignore --write .",
     "commit": "cz",
-    "gen:page": "plop"
+    "gen:page": "plop",
+    "lefthook": "lefthook install"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.3.0",
@@ -26,6 +27,7 @@
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-unicorn": "^55.0.0",
     "eslint-plugin-unused-imports": "^4.0.1",
+    "lefthook": "^1.7.11",
     "lite-server": "^2.6.1",
     "markuplint": "^4.9.2",
     "plop": "^4.0.1",
