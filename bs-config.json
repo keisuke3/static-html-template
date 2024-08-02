@@ -1,0 +1,8 @@
+{
+  "files": ["./src/pages/**/*"],
+  "port": 8000,
+  "open": false,
+  "server": {
+    "baseDir": "./src/pages"
+  }
+}
