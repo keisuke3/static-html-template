@@ -68,7 +68,7 @@ check-pnpm:
 	fi
 
 setup:
-	$(shell ./scripts/setup.sh)
+	scripts/setup.sh
 
 install:
 	pnpm install
